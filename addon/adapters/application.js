@@ -222,7 +222,7 @@ export default Ember.Object.extend(Ember.Evented, {
           });
         }
       }).catch(function(error) {
-        reject(new FetchError('Unable to Fetch resource(s)', error));
+        reject(new FetchError('Unable to Fetch resource(s): ' + error.message, error));
       });
     });
   },
